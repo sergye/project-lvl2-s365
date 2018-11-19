@@ -1,8 +1,8 @@
 {
   "name": "diff-sergye",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI diff tool",
-  "main": "dist/index.js",
+  "main": "index.js",
   "bin": {
     "gendiff": "dist/bin/gendiff.js"
   },
