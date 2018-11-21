@@ -1,6 +1,6 @@
 {
   "name": "diff-sergye",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "CLI diff tool",
   "main": "index.js",
   "bin": {
