@@ -1,5 +1,7 @@
 import fs from 'fs';
 import _ from 'lodash';
+import path from 'path';
+import parse from './parsers';
 
 const events = [
   {
@@ -25,8 +27,11 @@ const events = [
 ];
 
 const genDiff = (file1, file2) => {
-  const obj1 = JSON.parse(fs.readFileSync(file1));
-  const obj2 = JSON.parse(fs.readFileSync(file2));
+  const data1 = fs.readFileSync(file1, 'utf8');
+  const data2 = fs.readFileSync(file2, 'utf8');
+  const extension = path.extname(file1);
+  const obj1 = parse(extension)(data1);
+  const obj2 = parse(extension)(data2);
   const keys = _.union(_.keys(obj1), _.keys(obj2));
   const getEvent = key => _.find(events, ({ check }) => check(obj1, obj2, key));
   const result = keys.reduce((acc, key) => {

@@ -10,4 +10,6 @@ Compares two configuration files and shows a difference
 
 <a href="https://asciinema.org/a/jBRK2XiXfVzZ8WALaaEfujmiS">See how to call help option</a>
 
-<a href="https://asciinema.org/a/DwFkBeW7CvsEziS0584K2ns5X">See how to compare two JSON files</a>
+<a href="https://asciinema.org/a/jYqgtUylj8IDiCNlW6KhKTHTk">See how to compare two JSON files</a>
+
+<a href="https://asciinema.org/a/ELgBmlu5j4GcGqTio0yhZFiEQ">See how to compare two YML files</a>
