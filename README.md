@@ -1,6 +1,4 @@
-CLI diff tool - Hexlet project No. 2
-
-Compares two configuration files and shows a difference
+<h1>Compares two configuration files and shows a difference</h1>
 
 <a href="https://codeclimate.com/github/sergye/project-lvl2-s365/maintainability"><img src="https://api.codeclimate.com/v1/badges/3be593ff695ae22ef90b/maintainability" /></a>
 
@@ -13,3 +11,5 @@ Compares two configuration files and shows a difference
 <a href="https://asciinema.org/a/jYqgtUylj8IDiCNlW6KhKTHTk">See how to compare two JSON files</a>
 
 <a href="https://asciinema.org/a/ELgBmlu5j4GcGqTio0yhZFiEQ">See how to compare two YML files</a>
+
+<a href="https://asciinema.org/a/m57ginVX7fL7F2GLhyI7G2cD1">See how to compare two INI files</a>

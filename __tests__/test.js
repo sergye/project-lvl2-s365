@@ -12,4 +12,8 @@ describe('show diff', () => {
     const actual = genDiff('__tests__/__fixtures__/before.yml', '__tests__/__fixtures__/after.yml');
     expect(actual).toBe(expected);
   });
+  it('ini', () => {
+    const actual = genDiff('__tests__/__fixtures__/before.ini', '__tests__/__fixtures__/after.ini');
+    expect(actual).toBe(expected);
+  });
 });
