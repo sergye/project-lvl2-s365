@@ -11,7 +11,7 @@ const stringify = (value, depth = 1, tab = 4) => {
   return `{\n${body}\n${' '.repeat(indent - tab)}}`;
 };
 
-const render = (ast, depth = 1, tab = 4) => {
+const treeRender = (ast, depth = 1, tab = 4) => {
   const indent = depth * tab;
 
   const getStr = (name, value, symb = ' ') => (
@@ -22,11 +22,11 @@ const render = (ast, depth = 1, tab = 4) => {
     removed: node => getStr(node.key, node.value, '-'),
     unchanged: node => getStr(node.key, node.value),
     modified: node => [getStr(node.key, node.after, '+'), getStr(node.key, node.before, '-')],
-    nested: node => `${' '.repeat(indent)}${node.key}: ${render(node.children, depth + 1)}`,
+    nested: node => `${' '.repeat(indent)}${node.key}: ${treeRender(node.children, depth + 1)}`,
   };
 
-  const output = _.flatten(ast.map(node => cases[node.eventType](node))).join('\n');
+  const output = _.flatten(ast.map(node => cases[node.nodeType](node))).join('\n');
   return `{\n${output}\n${' '.repeat(indent - tab)}}`;
 };
 
-export default render;
+export default treeRender;
