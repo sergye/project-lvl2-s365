@@ -10,8 +10,8 @@ Compares two configuration files and shows a difference
 
 <a href="https://asciinema.org/a/jBRK2XiXfVzZ8WALaaEfujmiS">See how to call help option</a>
 
-<a href="https://asciinema.org/a/bWd7opmRcd7rqyy1xfdnGw6qR">See how to compare two JSON files in tree and plain formats</a>
+<a href="https://asciinema.org/a/bWd7opmRcd7rqyy1xfdnGw6qR">See how to compare two JSON files in tree, plain and JSON formats</a>
 
-<a href="https://asciinema.org/a/OuRxGjji5rPMqHWa0zSUF3lHa">See how to compare two YML files in tree and plain formats</a>
+<a href="https://asciinema.org/a/OuRxGjji5rPMqHWa0zSUF3lHa">See how to compare two YML files in tree, plain and JSON formats</a>
 
-<a href="https://asciinema.org/a/DByQ2ZAOhatdb4zlKak6MNst5">See how to compare two INI files in tree and plain formats</a>
+<a href="https://asciinema.org/a/DByQ2ZAOhatdb4zlKak6MNst5">See how to compare two INI files in tree, plain and JSON formats</a>
