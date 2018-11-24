@@ -8,7 +8,7 @@ const program = commander;
 program
   .version('2.0.12', '-v, --version')
   .description('Compares two configuration files and shows a difference.')
-  .option('-f, --format [type]', 'Output format: tree, plain', 'tree')
+  .option('-f, --format [type]', 'Output format: tree, plain, json', 'tree')
   .arguments('<firstConfig> <secondConfig>')
   .action((before, after, options) => { console.log(genDiff(before, after, options.format)); });
 
