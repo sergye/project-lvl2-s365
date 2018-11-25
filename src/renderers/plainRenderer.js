@@ -10,21 +10,13 @@ const getValue = (arg) => {
 };
 
 const plainRender = (ast, parent = '') => {
-  const getStr = (node, body = '') => `Property '${parent}${node.key}' was ${node.nodeType}${body}`;
-
+  const getFromTo = node => `. From ${getValue(node.before)} to ${getValue(node.after)}`;
+  const getAddStr = node => (_.isObject(node.value) ? ' with complex value' : ` with value: ${getValue(node.value)}`);
   const cases = {
     nested: node => `${plainRender(node.children, `${parent}${node.key}.`)}`,
-    modified: (node) => {
-      const body = `. From ${getValue(node.before)} to ${getValue(node.after)}`;
-      return getStr(node, body);
-    },
-    added: (node) => {
-      const stringify = ` with ${_.isObject(node.value)
-        ? 'complex value'
-        : `value: ${getValue(node.value)}`}`;
-      return getStr(node, stringify);
-    },
-    removed: node => getStr(node),
+    modified: node => `Property '${parent}${node.key}' was ${node.nodeType}${getFromTo(node)}`,
+    added: node => `Property '${parent}${node.key}' was ${node.nodeType}${getAddStr(node)}`,
+    removed: node => `Property '${parent}${node.key}' was ${node.nodeType}`,
   };
 
   const filtered = ast.filter(node => node.nodeType !== 'unchanged');
