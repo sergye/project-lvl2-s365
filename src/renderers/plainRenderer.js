@@ -1,25 +1,12 @@
 import _ from 'lodash';
 
-const types = [
-  {
-    check: arg => (_.isBoolean(arg)),
-    process: arg => (`'${arg}'`),
-  },
-  {
-    check: arg => (_.isString(arg)),
-    process: arg => (`'${arg}'`),
-  },
-  {
-    check: arg => (_.isObject(arg)),
-    process: () => 'complex value',
-  },
-];
-
-const getTypes = arg => types.find(({ check }) => check(arg));
-
 const getValue = (arg) => {
-  const { process } = getTypes(arg);
-  return process(arg);
+  const types = {
+    boolean: (`'${arg}'`),
+    string: (`'${arg}'`),
+    object: 'complex value',
+  };
+  return types[typeof arg];
 };
 
 const plainRender = (ast, parent = '') => {
